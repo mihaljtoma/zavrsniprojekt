@@ -1,0 +1,6 @@
+{
+    "ovp_enabled": true,
+    "ovp_limit": 20.02,
+    "ocp_enabled": true,
+    "ocp_limit": 2.0
+}

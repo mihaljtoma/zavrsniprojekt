@@ -1,0 +1,53 @@
+ax6003p_gui/
+│
+├── gui/
+│   ├── __init__.py
+│   ├── main_app.py         # Main window with menu + frame switching
+│   ├── home_page.py
+│   ├── control_page.py
+│   ├── graph_page.py
+│   └── info_page.py
+│
+├── device/
+│   ├── __init__.py
+│   └── ax6003p.py          # Interface wrapper for the device communication
+│
+├── utils/
+│   └── graph_utils.py      # Plotting, CSV export, etc.
+│
+├── assets/                 # Optional: for icons, stylesheets
+├── main.py                 # Entry point
+└── requirements.txt
+
+
+HomePage — Status Overview
+Purpose: Show basic device status at a glance.
+
+Device identification label (*IDN?)
+Output status (ON/OFF)
+Live voltage and current readings
+"Refresh" button to update readings
+
+ControlPage — Set Voltage/Current & Toggle Output
+Purpose: Allow user to control the device outputs.
+
+Voltage input field
+Current input field
+Apply button (APPL <VOLT>,<CURR>)
+Output ON/OFF buttons
+Confirmation/status messages
+
+GraphPage — Live Plot or History
+Purpose: Visualize real-time voltage/current or historical data.
+
+Matplotlib canvas or tk.Canvas for graph
+Time range selector (1 min, 5 min, etc.)
+Save data to CSV
+Start/Stop recording button
+
+InfoPage — Device Information & Help
+Purpose: Display static info, docs, or about section.
+
+Device details (*IDN?, firmware, serial number)
+Basic user guide (how to connect, commands)
+Link or info about your project/version
